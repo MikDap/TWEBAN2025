@@ -17,7 +17,7 @@
                 <li><a href="{{ url('/catalogo') }}" class="button">Prodotti</a></li>
                 <li><a href="#location" class="button">Location</a></li>
                 <li><a href="#chi siamo" class="button">Chi siamo</a></li>
-                <li><a href="#Login" class="button">Accedi</a></li>
+                <li><a href=" {{ url('/login') }}" class="button">Accedi</a></li>
             </ul>
         </nav>
     </header>

@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProdController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+Route::get('/catalogo', [ProdController::class, 'prod'])->name('layouts.catalogo_prod');
+Route::get('/chi_siamo', [PublicController::class, 'chi_siamo'])->name('chi_siamo');
+Route::get('/location', [PublicController::class, 'location'])->name('location');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
