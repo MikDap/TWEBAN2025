@@ -18,7 +18,7 @@ use App\Http\Controllers\ProdController;
 
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
-Route::get('/catalogo', [ProdController::class, 'prod'])->name('layouts.catalogo_prod');
+Route::get('/catalogo', [ProdController::class, 'index'])->name('layouts.catalogo_prod');
 Route::get('/chi_siamo', [PublicController::class, 'chi_siamo'])->name('chi_siamo');
 Route::get('/location', [PublicController::class, 'location'])->name('location');
 
